@@ -62,17 +62,17 @@ service:
   # nodePort: 8080
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
-ingress:
-  enabled: true
-  className: "alb"
-  annotations:
-    alb.ingress.kubernetes.io/ssl-redirect: 'false'
+# ingress:
+#   enabled: true
+#   className: "alb"
+#   annotations:
+#     alb.ingress.kubernetes.io/ssl-redirect: 'false'
 
-  hosts:
-    - host: appserver.poc-app.local
-      paths:
-        - path: /
-          pathType: Prefix
+#   hosts:
+#     - host: appserver.poc-app.local
+#       paths:
+#         - path: /
+#           pathType: Prefix
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
