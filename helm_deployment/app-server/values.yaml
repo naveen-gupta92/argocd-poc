@@ -79,9 +79,10 @@ service:
 #   #      - chart-example.local
 
 ingress:
-  enabled: false
+  enabled: true
   className: "nginx"  # Use "nginx" for local environments like Docker Desktop
-  annotations: {}  # Empty annotations for local setup (no need for SSL-redirect annotation)
+  annotations: 
+    kubernetes.io/ingress.class: "nginx" 
   hosts:
     - host: appserver.poc-app.local  # Custom domain for local testing
       paths:
