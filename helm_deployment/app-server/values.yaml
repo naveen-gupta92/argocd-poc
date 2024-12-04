@@ -87,11 +87,11 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-          # backend:
-          #   service:
-          #     name: appserver-service  # Ensure this matches the actual service name
-          #     port:
-          #       number: 8080  # Ensure this is the port your app is running on
+          backend:
+            service:
+              name: {{ include "app-server.fullname" . }}  # Use the same template function for the service name
+              port:
+                number: 8080
 
 
 resources: 
