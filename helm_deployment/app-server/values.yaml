@@ -79,7 +79,7 @@ service:
 #   #      - chart-example.local
 
 ingress:
-  enabled: true
+  enabled: false
   className: "nginx"  # Use "nginx" for local environments like Docker Desktop
   annotations: {}  # Empty annotations for local setup (no need for SSL-redirect annotation)
   hosts:
@@ -87,12 +87,6 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-          backend:
-            service:
-              name: {{ include "app-server.fullname" . }}  # Use the same template function for the service name
-              port:
-                number: 8080
-
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
