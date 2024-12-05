@@ -84,10 +84,15 @@ ingress:
   annotations: 
     kubernetes.io/ingress.class: "nginx" 
   hosts:
-    - host: appserver.poc-app.local  # Custom domain for local testing
+    - host: appserver.poc.local  # Custom domain for local testing
       paths:
         - path: /
           pathType: Prefix
+
+  tls:
+    - hosts:
+        - appserver.poc.local
+      secretName: appserver-tls
 
 resources: 
   # We usually recommend not to specify default resources and to leave this as a conscious
