@@ -7,6 +7,13 @@ url: nats://{{ .Values.service.name }}
 url: nats://{{ .Values.headlessService.name }}
 {{- end }}
 
+# url refactoring with new name host
+{{- if .Values.service.enabled }}
+host: nats://{{ .Values.service.name }}
+{{- else }}
+host: nats://{{ .Values.headlessService.name }}
+{{- end }}
+
 {{- with .context }}
 
 # creds
