@@ -439,7 +439,7 @@ makeServiceAccountJob:
 ##
 buckets: 
     # Name of the bucket
-  - name: analysis-sessions
+  - name: demo-bucket
     # Policy to be set on the
     # bucket [none|download|upload|public]
     # policy: none
@@ -451,16 +451,8 @@ buckets:
     # set objectlocking for
     # bucket [true|false] NOTE: versioning is enabled by default if you use locking
     # objectlocking: false
-  - name: analysis-schemas
-    # folders:
-    #   - localPath: C:\\Users\\admin\\Documents\\EKS-STA-Framework\\dynamic_schema_minio
-    #     bucketPath: analysis-schemas
-    # policy: none
-    # purge: false
-    # versioning: true
-    # set objectlocking for
-    # bucket [true|false] NOTE: versioning is enabled by default if you use locking
-    # objectlocking: false
+  - name: demo-bucket2
+
     
 
 ## Additional Annotations for the Kubernetes Job makeBucketJob
