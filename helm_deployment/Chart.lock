@@ -1,0 +1,9 @@
+dependencies:
+- name: minio
+  repository: file://charts/minio
+  version: 5.2.0
+- name: app-server
+  repository: file://charts/app-server
+  version: 0.1.0
+digest: sha256:8623844a484c6c048fe36c6c733572c5822ec6fc762d199a3a3a6f5832cdfd6c
+generated: "2024-12-09T12:55:46.7891804+05:30"
